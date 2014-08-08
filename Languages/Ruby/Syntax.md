@@ -1,0 +1,45 @@
+- Use two spaces per indentation level (aka soft tabs). No hard tabs.
+- Don't use semicolon for single-line body
+- Use :: only to reference constants(this includes classes and modules) and constructors. Never use :: for regular method invocation.
+- Use def with parentheses when there are arguments. Omit the parentheses when the method doesn't accept any arguments.
+- Prefer iterators to "for"
+- For short conditions use ternary operator
+- Use "unless" instead of "if not"
+- Use "until" instead of "while not"
+- Do not use "unless" with "else"
+- Do not include ternary operator in other ternary operator
+- Avoid of using "not" in assignment. Use "!" instead
+- In conditional statements use "and", "or", "not"
+- Use reversed "if/unless/while/until" modifiers for single-line body
+- Don't use parentheses around the condition of an "if/unless/while/until"
+- Keep "do" clause when using "while/until" for multi-line body
+- Use "loop" instead of "while/until" when you need an infinite loop
+- Omit parentheses when using Ruby native functions like "p", "puts", "attr_reader" etc
+- Omit the outer braces around an implicit options hash
+- Omit parentheses for method calls with no arguments
+- Prefer {...} over do...end for single-line blocks
+- Avoid return where not required for flow of control
+- Avoid "self" where not required. Omit this rule only when calling custom attribute writer inside class
+- Avoid shadowing variables with local variables unless they are both equivalent
+- Add parentheses in conditional statement when you are using assignment operator inside
+- Use shorthand self assignment operators whenever applicable
+- Use "||=" to initialize variables only if they're not already initialized, except boolean variables
+- Use "&&=" to preprocess variables that may or may not exist
+- Try not to use equality operator. Instead you may use "is_a?", "zero?", "nil?", "=~" etc
+- Never put a space between a method name and the opening parenthesis
+- Use the new lambda literal syntax for single line body blocks. Use the lambda method for multi-line blocks
+- Prefix with _ unused block parameters and local variables
+- Use $stdout/$stderr/$stdin instead of STDOUT/STDERR/STDIN
+- Avoid single-line methods
+- Use spaces around operators, except exponent operator
+- Open and close hash body with spaces
+- Do not add spaces to inline expression, eg "My name is #{name}"
+- No spaces after "(", "[", "!" or before "]", ")"
+- Add indent to "when" clause when using "case" statement
+- Keep assignment easy and readable
+- Put end of line around method definitions and class definition blocks.
+- Avoid line continuation \ where not required
+- When continuing a chained method invocation on another line keep the . on the second line.
+- Align big chunk of method arguments, big hash or array in multiline. Put end of line around body
+- It is preferred to add underscores to large numeric literals to improve their readability
+- Don't use block comments
