@@ -1,9 +1,7 @@
-- space # todo
+# Templates
 
-PHP, Ruby, EJS and others
-
-PHP
-```php
+- PHP template style
+```PHP
 <?php
 $items = $this->getAllItems();
 $isBlue = $this->checkIfIsBlue();
@@ -27,11 +25,26 @@ $isBlue = $this->checkIfIsBlue();
             ], 'item-show')?>"><?
                 echo $item;
             ?></a>
-            <a class="js-action-remove" href="javascript:void(0);" data-action="remove">Remove</a><?// RM_REVIEW?>
+            <a class="js-action-remove" href="javascript:void(0);" data-action="remove">Remove</a># todo js-action-remove or data-action="remove"
         </li><?
         if ($pos % 4) :
             ?><div class="clear"></div><?
         endif;
     endforeach;
 ?></ul>
+```
+
+- Ruby template style
+```Ruby
+# todo
+```
+
+- EJS template style
+```Ruby
+# todo
+```
+
+- Other
+```
+# todo
 ```

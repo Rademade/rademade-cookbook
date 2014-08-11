@@ -1,6 +1,5 @@
-```
-Class Layout
-
+# Class Layout
+```Ruby
 class $ClassName$ < $Ancestor$
 
     # Extend clause
@@ -59,6 +58,7 @@ class $ClassName$ < $Ancestor$
 end
 ```
 
-Example
-
+# Examples
+```
 # todo examples
+```
