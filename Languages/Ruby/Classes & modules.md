@@ -3,7 +3,7 @@
 - It is good to write special methods like "to_s", "as_json" etc
 - Avoid the usage of class (@@) variables
 
-```ruby
+```
 Class Layout
 
 class $ClassName$ < $Ancestor$
