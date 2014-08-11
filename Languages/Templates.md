@@ -3,7 +3,7 @@
 PHP, Ruby, EJS and others
 
 PHP
-
+```php
 <?php
 $items = $this->getAllItems();
 $isBlue = $this->checkIfIsBlue();
@@ -34,3 +34,4 @@ $isBlue = $this->checkIfIsBlue();
         endif;
     endforeach;
 ?></ul>
+```
