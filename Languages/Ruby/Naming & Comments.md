@@ -12,5 +12,5 @@
 - Prefer string interpolation and string formatting instead of string concatenation
 - Prefer single-quoted strings when you don't need string interpolation or special symbols such as \t, \n, ', etc.
 
-- Prefer using "%()", "%Q()" and "%q()" for escaping
-- Avoid the use of %s. It seems that the community has decided :"some string" is the preferred way to create a symbol with spaces in it
+- Prefer using `%()`, `%Q()` and `%q()` for escaping
+- Avoid the use of %s. It seems that the community has decided :`some string` is the preferred way to create a symbol with spaces in it

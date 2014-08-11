@@ -5,7 +5,7 @@
 - Use SCREAMING_SNAKE_CASE for constants
 
 - Prefer to write comments in English
-- Use one space between the leading "#", "//" or language specific single-line comment character of the comment and the text of the comment
+- Use one space between the leading `#`, `//` or language specific single-line comment character of the comment and the text of the comment
 - You can comment in same line where code is only if comment is very short, otherwise write immediately above the line
 - You can have multiline comments. Start first comment with capitalized letter. See example
 # This thing is doing one, two, three
