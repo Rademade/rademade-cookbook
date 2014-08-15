@@ -364,12 +364,12 @@ end
 
 # good
 case value
-    when 1
-      puts 'It is one'
-    when 42
-      puts 'It is forty two'
-    else
-      puts 'Unknown value'
+  when 1
+    puts 'It is one'
+  when 42
+    puts 'It is forty two'
+  else
+    puts 'Unknown value'
 end
 ```
 * <a name="continuation"></a>Avoid line continuation `\` where not required. <sup>[[link](#continuation)]</sup>
