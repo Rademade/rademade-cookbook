@@ -1,9 +1,8 @@
 # Templates
 
-- Common template style
--
+## Common template style
 
-- See example
+* <a name="template-style"></a>See example. <sup>[[link](#template-style)]</sup>
 ```HTML+PHP
 # bad
 <div>
@@ -20,7 +19,7 @@
 ?></div>
 ```
 
-- Do not put space if it does not appear in all cases
+* <a name="redundant-spaces"></a> Do not put space if it does not appear in all cases. <sup>[[link](#redundant-spaces)]</sup>
 ```HTML+PHP
 # bad
 <div <?
@@ -67,7 +66,7 @@
 ?>"></div>
 ```
 
-- Do not indent inside the first block
+* <a name="first-block-indent"></a> Do not indent inside the first block. <sup>[[link](#first-block-indent)]</sup>
 ```HTML+PHP
 # bad
 <?php
@@ -81,7 +80,7 @@ $items = array();
 ```
 
 
-- Do not use control structures inline
+* <a name="inline-control-structures"></a> Do not use control structures inline. <sup>[[link](#inline-control-structures)]</sup>
 ```HTML+PHP
 # bad
 <div<? if ($last) : ?> class="last"<? endif; ?>></div>
@@ -94,7 +93,7 @@ $items = array();
 ?>></div>
 ```
 
-- Do not use html comments
+* <a name="html-comments"></a> Do not use html comments. <sup>[[link](#html-comments)]</sup>
 ```HTML+PHP
 # bad
 <!--<div><?= $title ?></div>-->
@@ -106,10 +105,9 @@ $items = array();
 <div><?= $name ?></div><?#= name of page ?>
 ```
 
-- PHP template style
--
+## PHP template style
 
-- Use `<?php` on top of template, `<?` otherwise
+* <a name="php-tag"></a> Use `<?php` on top of template, `<?` otherwise. <sup>[[link](#php-tag)]</sup>
 ```HTML+PHP
 # bad
 <div><?php
@@ -124,7 +122,7 @@ $count = 0;
 ?></div>
 ```
 
-- Do not use `?>` at the end of file
+* <a name="php-closing-tag"></a> Do not use `?>` at the end of file. <sup>[[link](#php-closing-tag)]</sup>
 ```HTML+PHP
 # bad
 <div class="clear"></div><?
@@ -136,7 +134,7 @@ $count = 0;
 $count = 0;
 ```
 
-- Use alternative syntax for control structures
+* <a name="alternative-control-structures"></a> Use alternative syntax for control structures. <sup>[[link](#alternative-control-structures)]</sup>
 ```HTML+PHP
 # bad
 <div><?
@@ -153,7 +151,7 @@ $count = 0;
 ?></div>
 ```
 
-- Use `<?=` `?>` for printing variables inline, use `echo` otherwise
+* <a name="php-prinitng-variables"></a> Use `<?=` `?>` for printing variables inline, use `echo` otherwise. <sup>[[link](#php-prinitng-variables)]</sup>
 ```HTML+PHP
 # bad
 <div><? echo $title; ?></div>
@@ -170,10 +168,9 @@ $count = 0;
 ?></div>
 ```
 
-- Ruby template style
--
+## Ruby template style
 
-- Do not put end of line before `%>` if it is last symbol
+* <a name="ruby-closing-tag"></a> Do not put end of line before `%>` if it is last symbol. <sup>[[link](#ruby-closing-tag)]</sup>
 ```HTML+Ruby
 # bad
 <div></div><%
@@ -185,7 +182,7 @@ count = 0
 count = 0 %>
 ```
 
-- Use `<%=` `%>` for printing variables inline, use `concat` otherwise
+* <a name="ruby-prinitng-variables"></a> Use `<%=` `%>` for printing variables inline, use `concat` otherwise. <sup>[[link](#ruby-prinitng-variables)]</sup>
 ```HTML+Ruby
 # bad
 <div><% concat $title; %></div>
