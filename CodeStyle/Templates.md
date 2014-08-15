@@ -56,12 +56,12 @@
     endif;
 ?>"></div>
 
-<div class="block <?
+<div class="block<?
     if ($red) :
-        ?>red<?
+        ?> red<?
     endif;
     if ($last) :
-        ?>last<?
+        ?> last<?
     endif;
 ?>"></div>
 ```
