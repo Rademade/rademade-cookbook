@@ -1,7 +1,7 @@
 # Templates
 
 - PHP template style
-```PHP
+```HTML+PHP
 <?php
 $items = $this->getAllItems();
 $isBlue = $this->checkIfIsBlue();
