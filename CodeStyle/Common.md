@@ -43,6 +43,10 @@ if ($month == '') {
     echo 'Your calendar is broken too';
 }
 
+if ($count == 1) {
+    echo 'First!';
+}
+
 ```
 - Prefer to write comments in English
 - Use one space between the leading `#`, `//` or language specific single-line comment character of the comment and the text of the comment
