@@ -121,23 +121,147 @@ if ($year == 2012) {
 ```
 * <a name="global-variables"></a>Do not use global variables, put them in namespace. <sup>[[link](#global-variables)]</sup>
 * <a name="blank-lines"></a>Maximum blank lines - 1. <sup>[[link](#blank-lines)]</sup>
+```PHP
+# bad
+if ($isGoodDay) {
 
-- Prefer short syntax for arrays and hashes
 
-- Try to collect class methods in groups by purpose
+    echo 'Good day';
 
+}
+```
+* <a name="short-array"></a>Prefer short syntax for arrays and hashes. <sup>[[link](#short-array)]</sup>
+* <a name="method-grouping"></a>Try to collect class methods in groups by purpose.<sup>[[link](#method-grouping)]</sup>
 * <a name="ternary-operator"></a>For short conditions use ternary operator. <sup>[[link](#ternary-operator)]</sup>
+```PHP
+# bad
+if ($isGood) {
+    $color = 'green';
+} else {
+    $color = 'red';
+}
+
+# good
+$color = $isGood ? 'green' : 'red';
+```
 * <a name="iterator"></a>Prefer iterators to `for`. <sup>[[link](#iterator)]</sup>
 * <a name="embedded-ternary-operator"></a>Do not include ternary operator in other ternary operator. <sup>[[link](#embedded-ternary-operator)]</sup>
+```PHP
+# bad
+$color = $previous == 'red' ? $isGood ? 'green' : 'yellow' : 'orange';
+```
 * <a name="shadowing-variables"></a>Avoid shadowing variables with local variables unless they are both equivalent. <sup>[[link](#shadowing-variables)]</sup>
+```Ruby
+# ok
+def initialize(options)
+  self.options = options
+  # both options and self.options are equivalent here
+end
+
+# bad
+def do_something(options = {})
+  unless options[:when] == :later
+    output(self.options[:message])
+  end
+end
+
+# good
+def do_something(params = {})
+  unless params[:when] == :later
+    output(options[:message])
+  end
+end
+```
 * <a name="method-space-parenthesis"></a>Never put a space between a method name and the opening parenthesis. <sup>[[link](#method-space-parenthesis)]</sup>
+```PHP
+# bad
+public function getName () { ... }
+
+# good
+public function getName() { ... }
+```
 * <a name="operator-space"></a>Use spaces around operators. <sup>[[link](#operator-space)]</sup>
+```PHP
+# bad
+$day = 60*60*24;
+
+# good
+$day = 60 * 60 * 24;
+```
 * <a name="hash-space"></a>Open and close single-line hash body with spaces. <sup>[[link](#hash-space)]</sup>
+```PHP
+# bad
+[$key => $value]
+
+# good
+[ $key => $value ]
+```
 * <a name="bracket-space"></a>No spaces after `(`, `!` or before `)`. <sup>[[link](#bracket-space)]</sup>
+```PHP
+# bad
+$entity = $this->find( $value );
+if ( $entity ) {
+    $found = ! $entity; 
+}
+
+# good
+$entity = $this->find($value);
+if ($entity) {
+    $found = !$entity; 
+}
+```
 * <a name="assignment"></a>Keep assignment easy and readable. <sup>[[link](#assignment)]</sup>
 * <a name="method-definitions"></a>Put end of line around method definitions and class definition blocks. <sup>[[link](#method-definitions)]</sup>
+```PHP
+# bad
+class Dog {
+    public function say() {
+        echo 'Bow-wow-wow';
+    }
+    public function getName() {
+        return 'Bobik';
+    }
+}
+
+# good
+class Dog {
+
+    public function say() {
+        echo 'Bow-wow-wow';
+    }
+    
+    public function getName() {
+        return 'Bobik';
+    }
+    
+}
+```
 * <a name="long-arguments"></a>Align big chunk of method arguments, big hash or array in multiline. Put end of line around body. <sup>[[link](#long-arguments)]</sup>
+```PHP
+# bad
+$months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
+# good
+$months = [
+    'january', 
+    'february', 
+    'march', 
+    'april', 
+    'may', 
+    'june', 
+    'july', 
+    'august', 
+    'september', 
+    'october', 
+    'november', 
+    'december'
+];
 
-
-
+# still good
+$months = [
+    'january', 'february', 'march', 
+    'april', 'may', 'june', 
+    'july', 'august', 'september', 
+    'october', 'november', 'december'
+];
+```
