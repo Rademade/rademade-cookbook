@@ -121,3 +121,23 @@ if ($year == 2012) {
 ```
 * <a name="global-variables"></a>Do not use global variables, put them in namespace. <sup>[[link](#global-variables)]</sup>
 * <a name="blank-lines"></a>Maximum blank lines - 1. <sup>[[link](#blank-lines)]</sup>
+
+- Prefer short syntax for arrays and hashes
+
+- Try to collect class methods in groups by purpose
+
+* <a name="ternary-operator"></a>For short conditions use ternary operator. <sup>[[link](#ternary-operator)]</sup>
+* <a name="iterator"></a>Prefer iterators to `for`. <sup>[[link](#iterator)]</sup>
+* <a name="embedded-ternary-operator"></a>Do not include ternary operator in other ternary operator. <sup>[[link](#embedded-ternary-operator)]</sup>
+* <a name="shadowing-variables"></a>Avoid shadowing variables with local variables unless they are both equivalent. <sup>[[link](#shadowing-variables)]</sup>
+* <a name="method-space-parenthesis"></a>Never put a space between a method name and the opening parenthesis. <sup>[[link](#method-space-parenthesis)]</sup>
+* <a name="operator-space"></a>Use spaces around operators. <sup>[[link](#operator-space)]</sup>
+* <a name="hash-space"></a>Open and close single-line hash body with spaces. <sup>[[link](#hash-space)]</sup>
+* <a name="bracket-space"></a>No spaces after `(`, `!` or before `)`. <sup>[[link](#bracket-space)]</sup>
+* <a name="assignment"></a>Keep assignment easy and readable. <sup>[[link](#assignment)]</sup>
+* <a name="method-definitions"></a>Put end of line around method definitions and class definition blocks. <sup>[[link](#method-definitions)]</sup>
+* <a name="long-arguments"></a>Align big chunk of method arguments, big hash or array in multiline. Put end of line around body. <sup>[[link](#long-arguments)]</sup>
+
+
+
+

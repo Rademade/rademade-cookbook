@@ -33,27 +33,25 @@ class $ClassName$ < $Ancestor$
     end
 
     # Methods
-    # Put abstract methods at beginning
-    # Put predicate methods before re-declared methods
-    # Put re-declared methods at end
+    # Put methods in order:
+    # 1. abstract class methods
+    # 2. abstract instance methods
+    # 3. class methods
+    # 4. class predicates
+    # 5. class overridden, implemented or magic methods
+    # 6. instance methods
+    # 7. instance predicates
+    # 8. instance overridden, implemented or magic methods
 
-    # Public class methods
-
-    # Public instance methods
-
-    # Special magic methods
+    # Methods
 
     protected
 
-    # Protected class methods
-
-    # Protected instance methods
+    # Methods
 
     private
 
-    # Private class methods
-
-    # Private instance methods
+    # Methods
 
 end
 ```

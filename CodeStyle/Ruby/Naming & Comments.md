@@ -5,7 +5,6 @@
 - The names of potentially dangerous methods (i.e. methods that modify self or the arguments, exit! (doesn't run the finalizers like exit does), etc.) should end with an exclamation mark if there exists a safe version of that dangerous method
 - Define the non-bang (safe) method in terms of the bang (dangerous) one if possible
 
-- Prefer short syntax for arrays and hashes
 - Prefer declaring arrays of string(words)/symbols with `%w/%i`
 - Use symbols instead of strings as hash keys
 - Use hash rockets instead semicolons
@@ -15,3 +14,5 @@
 
 - Prefer using `%()`, `%Q()` and `%q()` for escaping
 - Avoid the use of `%s`. It seems that the community has decided :`some string` is the preferred way to create a symbol with spaces in it
+
+* <a name="block-comments"></a>Don't use block comments. <sup>[[link](#block-comments)]</sup>

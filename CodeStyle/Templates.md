@@ -106,6 +106,7 @@ $items = array();
 ```
 
 ## PHP template style
+- Use spinal-case for naming view directories and templates
 
 * <a name="php-tag"></a> Use `<?php` on top of template, `<?` otherwise. <sup>[[link](#php-tag)]</sup>
 ```HTML+PHP
