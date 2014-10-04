@@ -4,3 +4,4 @@
  2. [Working with dates and element grouping](https://github.com/ankane/groupdate)
  3. [Event + Publisher service](https://github.com/krisleech/wisper)
  4. [Rails params validations and conversion](https://github.com/nicolasblanco/rails_param)
+ 5. [JSON API resources](http://www.cerebris.com/blog/2014/08/22/introducing-jsonapi-resources)
