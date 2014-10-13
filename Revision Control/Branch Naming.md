@@ -11,18 +11,20 @@ In general case `{category-prefix}` is kind of thing which you are doing.
 
 And where `{subject}` is that thing. See examples:
 
-- refactoring/view-templates
+- `refactoring/view-templates`
 
-- refactoring/excel-export
+- `refactoring/excel-export`
 
-- bugfix/i18n-routing
+- `bugfix/i18n-routing`
 
-- bugfix/menu-crash
+- `bugfix/menu-crash`
 
-- markup/login-popup
+- `markup/login-popup`
 
-- views/seller-pages
+- `views/seller-pages`
 
-- feature/facebook-auth
+- `feature/facebook-auth`
 
-- feature/statistics
+- `feature/statistics`
+
+Always use `-` (dash) as words delimiter.
