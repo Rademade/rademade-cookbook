@@ -90,13 +90,13 @@ attributes = { 'type' => 'text', 'class' => 'input-holder' }
 # good
 attributes = { :type => 'text', :class => 'input-holder' }
 ```
-* <a name="hash-rockets"></a>Use hash rockets instead semicolons. <sup>[[link](#hash-rockets)]</sup>
+* <a name="hash-rockets"></a>Prefer symbols instead of strings as hash keys. <sup>[[link](#hash-rockets)]</sup>
 ```Ruby
 # bad
-attributes = { type: 'text', class: 'input-holder' }
+hash = { 'one' => 1, 'two' => 2, 'three' => 3 }
 
 # good
-attributes = { :type => 'text', :class => 'input-holder' }
+hash = { one: 1, two: 2, three: 3 }
 ```
 * <a name="string-concat"></a>Prefer string interpolation and string formatting instead of string concatenation. <sup>[[link](#string-concat)]</sup>
 ```Ruby
