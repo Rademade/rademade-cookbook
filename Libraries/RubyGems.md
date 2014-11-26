@@ -8,6 +8,7 @@
 ### Databases
 1. [UUID](http://blog.arkency.com/2014/10/how-to-start-using-uuid-in-activerecord-with-postgresql)
 2. [Graph databases](https://github.com/neo4jrb/neo4j)
+3. [Elastic model](https://github.com/printercu/elastics-rb)
 
 ### Syntax sugar
 1. [Working with dates and element grouping](https://github.com/ankane/groupdate)
