@@ -18,3 +18,5 @@
 1. [Drag&Drop (can use with Angular)](https://github.com/gaearon/react-dnd)
 2. [React callendar](http://jslog.com/react-date-picker)
 
+### Offile application
+1. [IndexDB wrapper](http://www.dexie.org/)
