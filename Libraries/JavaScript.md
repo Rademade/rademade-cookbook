@@ -11,6 +11,8 @@
 1. [Angular JS social auth](https://github.com/sahat/satellizer)
 2. [AngularJS + React](https://github.com/davidchang/ngReact)
 3. [Charts](http://jtblin.github.io/angular-chart.js/)
+4. [Ng-Auth example](https://www.airpair.com/ruby-on-rails-4/posts/authentication-with-angularjs-and-ruby-on-rails)
+
  
 ### ReactJS
 1. [Drag&Drop (can use with Angular)](https://github.com/gaearon/react-dnd)
