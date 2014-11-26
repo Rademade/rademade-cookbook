@@ -5,3 +5,6 @@
  3. [Transfer nodejs scripts to browser](http://browserify.org/)
  4. [Web database with sync](http://pouchdb.com/)
  5. [Speedify AJAX request](https://github.com/typicode/pegasus)
+ 6. [Iframe/Windows messanges](https://github.com/benzap/flyer.js)
+ 
+
