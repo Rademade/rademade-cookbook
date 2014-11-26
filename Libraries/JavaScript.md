@@ -16,4 +16,5 @@
  
 ### ReactJS
 1. [Drag&Drop (can use with Angular)](https://github.com/gaearon/react-dnd)
+2. [React callendar](http://jslog.com/react-date-picker)
 
