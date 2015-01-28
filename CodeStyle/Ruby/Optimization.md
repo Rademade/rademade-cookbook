@@ -1,6 +1,6 @@
 # Code optimization
 
-1. [Tail optimization](http://nithinbekal.com/posts/ruby-tco/)
+- [Tail optimization](http://nithinbekal.com/posts/ruby-tco/)
 ```ruby
 RubyVM::InstructionSequence.compile_option = {
   tailcall_optimization: true,
@@ -8,4 +8,4 @@ RubyVM::InstructionSequence.compile_option = {
 }
 ```
 
-2. [Debug software](http://rbkit.codemancers.com/v0.1.10/docs/using-rbkit-desktop-app)
+- [Debug software](http://rbkit.codemancers.com/v0.1.10/docs/using-rbkit-desktop-app)
