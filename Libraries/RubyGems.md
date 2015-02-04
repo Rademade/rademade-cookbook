@@ -10,6 +10,9 @@
 2. [Graph databases](https://github.com/neo4jrb/neo4j)
 3. [Elastic model](https://github.com/printercu/elastics-rb)
 
+### API
+1. [Api Parser](https://github.com/balvig/spyke)
+
 ### Syntax sugar
 1. [Working with dates and element grouping](https://github.com/ankane/groupdate)
 2. [Date API](https://github.com/Intrepidd/working_hours)
