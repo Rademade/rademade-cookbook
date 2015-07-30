@@ -110,15 +110,15 @@ good = not bad
 # good
 good = !bad
 ```
-* <a name="conditional-statements"></a>In conditional statements use `and`, `or`, `not`. <sup>[[link](#conditional-statements)]</sup>
+* <a name="conditional-statements"></a>In conditional statements use &&, ||, !. <sup>[[link](#conditional-statements)]</sup>
 ```Ruby
 # bad
-if good && !(red || green)
+if good and not(red or green)
   puts 'Some magic'
 end
 
 # good
-if good and not(red or green)
+if good && !(red || green)
   puts 'Some magic'
 end
 ```
