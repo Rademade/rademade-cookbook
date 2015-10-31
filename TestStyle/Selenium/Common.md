@@ -1,4 +1,4 @@
-#General rules for selecting elements on the page
+#General priority rules for selecting elements on the page
   -  Find elements by visible content or name
 
   ```slim
@@ -26,6 +26,37 @@
 
   ```
 
-  -  Use data
   -  Find elements using css selectors(by class, position, type etc.)
-  -  Add data-ci-selector="profile-bu" (only in exceptional cases)
+  ```slim
+  <!-- example template snippet  -->
+
+  div.profile-box(type="text" id="email" name="email")
+    p.box-title Facebook
+    div.btn-container
+      button.btn.submit-button Activate
+
+  div.profile-box(type="text" id="email" name="email")
+    p.box-title Twitter
+    div.btn-container
+      button.btn.submit-button Activate
+  ```
+
+  ```Ruby
+
+  # bad[add custom selector to
+  find proper container]
+
+  <!-- change template  -->
+
+    div.profile-box(type="text" id="email" name="email")
+      p.box-title Facebook
+      div.btn-container
+        button.btn.submit-button(test-attr="facebook-btn") Activate
+
+    find["button[test-attr='facebook-btn']").click
+
+  # good[class with visible content]
+     find('.profile-box', :text => 'Facebook').click_button('Activate')
+
+  ```
+  -  Add custom selector (only in exceptional cases)
