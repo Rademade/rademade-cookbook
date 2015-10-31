@@ -40,9 +40,10 @@
     div.btn-container
       button.btn.submit-button Activate
   ```
-  ```slim
+  ```Ruby
   # bad[add custom selector]
-
+  ```
+  ```slim
   <!-- change template  -->
 
     div.profile-box(type="text" id="email" name="email")
@@ -52,7 +53,8 @@
   ```
   ```Ruby
     find["button[test-attr='facebook-btn']").click
-
+  ```
+  ```Ruby
   # good[class with visible content]
 
      find('.profile-box', :text => 'Facebook').click_button('Activate')
