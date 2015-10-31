@@ -40,11 +40,8 @@
     div.btn-container
       button.btn.submit-button Activate
   ```
-
-  ```Ruby
-
-  # bad[add custom selector to
-  find proper container]
+  ```slim
+  # bad[add custom selector]
 
   <!-- change template  -->
 
@@ -52,10 +49,12 @@
       p.box-title Facebook
       div.btn-container
         button.btn.submit-button(test-attr="facebook-btn") Activate
-
+  ```
+  ```Ruby
     find["button[test-attr='facebook-btn']").click
 
   # good[class with visible content]
+
      find('.profile-box', :text => 'Facebook').click_button('Activate')
 
   ```
