@@ -1,4 +1,4 @@
-#General priority rules for selecting elements on the page
+#Priority rules for search items on the page
   -  Find elements by visible content or name
 
   ```slim
@@ -14,9 +14,9 @@
 
   # bad[class, id]
 
-    page.find('#email').set(@email)
-    page.find('#password').set(@passwod)
-    page.find('.submit-button', :match => :first).click
+    find('#email').set(@email)
+    find('#password').set(@passwod)
+    find('.submit-button', :match => :first).click
 
   # good[visible content, name]
 
@@ -60,4 +60,5 @@
      find('.profile-box', :text => 'Facebook').click_button('Activate')
 
   ```
-  -  Add custom selector (only in exceptional cases)
+  - Add custom selector (only in exceptional cases)
+  - Never use [id, class] as a custom selector
