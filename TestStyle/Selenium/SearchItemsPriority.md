@@ -49,10 +49,10 @@
     div.profile-box(type="text" id="email" name="email")
       p.box-title Facebook
       div.btn-container
-        button.btn.submit-button(test-attr="facebook-btn") Activate
+        button.btn.submit-button(test-selector="facebook-btn") Activate
   ```
   ```Ruby
-    find["button[test-attr='facebook-btn']").click
+    find["button[test-selector='facebook-btn']").click
   ```
   ```Ruby
   # good[class with visible content]
@@ -60,5 +60,5 @@
      find('.profile-box', :text => 'Facebook').click_button('Activate')
 
   ```
-  - Add custom selector (only in exceptional cases)
+  - Add custom selector '[test-selector]' (only in exceptional cases)
   - Never use [id, class] as a custom selector
