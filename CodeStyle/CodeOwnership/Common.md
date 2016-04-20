@@ -38,7 +38,7 @@ a = () ->
 
 **Jade/Slim**
 ```jade
-// @author Vladislav Melyanitskiy <kach95>
+// @author Name Surname <github-nickname>
 h1() Tag
 ```
 
