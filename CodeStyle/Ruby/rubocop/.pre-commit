@@ -1,0 +1,89 @@
+#!/bin/sh
+#
+# author: Vadim Shaveyko <@vshaveyko>
+#
+# vim:set filetype=sh:
+#
+red='\033[0;31m'
+green='\033[0;32m'
+yellow='\033[0;33m'
+NC='\033[0m'
+#
+# Can improve script to check for existancy of HEAD commit
+# if there is none we can use all files present or check againts empty tree
+#
+# if git rev-parse --verify HEAD >/dev/null 2>&1
+# then
+#   against=HEAD
+# fi
+
+# Check if rubocop is installed for the current project
+# backend/bin/bundle exec rubocop -v >/dev/null || { echo >&2 "${red}[Ruby Style][Fatal]: Add rubocop to your Gemfile pwd is $(pwd)"; exit 1; }
+# backend/bin/bundle exec rubocop -v || { echo >&2 "${red}[Ruby Style][Fatal]: Add rubocop to your Gemfile pwd is $(pwd) path is $PATH home is $HOME"; exit 1; }
+
+# Get only the staged files
+ALL_FILES=`git diff-index --name-status --cached HEAD | # Find all staged files
+           egrep -i '^(A|M).+$'                       | # Only process certain files - A=added M=modified
+           sed -e 's/^[AM][[:space:]]*//'             | # Remove leading git info
+           grep -v Makefile                           |
+           grep -v \.sass$                            |
+           grep -v \.scss$                            |
+           grep -v \.css$                             |
+           sort                                       | # Remove duplicates
+           uniq`
+
+RUBY_FILES=`git diff-index --name-status --cached HEAD | # Find all staged files
+            egrep -i '^(A|M).+$'                       | # Only process certain files - A=added M=modified
+            sed -e 's/^[AM][[:space:]]*//'             | # Remove leading git info
+            grep \.rb$                                 |
+            grep -v \.erb$                             |
+            sort                                       | # Remove duplicates
+            uniq`
+
+# RUBY_FILES="$(echo $ALL_FILES | grep \.rb$)"
+
+if [ "$ALL_FILES" != "" ]
+then
+
+  # Check with ruby styleguide
+  if [ "$RUBY_FILES" != "" ]
+  then
+    echo "${green}[Ruby Style][Info]: Checking Ruby Style${NC}"
+
+    echo "${green}[Ruby Style][Info]: ${RUBY_FILES}${NC}"
+
+    # if [ ! -f '.rubocop.yml' ]; then
+    #   echo "${yellow}[Ruby Style][Warning]: No .rubocop.yml config file.${NC}"
+    # fi
+
+    # Run rubocop on the staged ruby files
+    backend/bin/bundle exec rubocop --force-exclusion -a $RUBY_FILES
+
+    if [ $? -ne 0 ]; then
+      echo "${red}[Ruby Style][Error]: Fix the issues and commit again${NC}"
+      exit 1
+    fi
+  else
+    echo "${green}[Ruby Style][Info]: No files to check${NC}"
+  fi
+
+  # Projectwide fixes
+  for FILE in $(echo $ALL_FILES | tr '\n' ' '); do
+    # Replace multiple empty lines with one
+    sed -i '' '/^$/N;/^\n$/D' "$FILE" || { echo >&2 "Error"; exit 0; }
+
+    # Replace tabs with two spaces
+    sed -i '' $'s/\t/  /g' "$FILE" || { echo >&2 "Error"; exit 1; }
+
+    # Strip trailing whitespace
+    sed -i '' -E 's/[[:space:]]*$//g' "$FILE" || { echo >&1 "Error"; exit 1; }
+
+    # Add newline to the end of the file
+    # sed -i '' $'/^$/!s/$/\/' "$FILE" || { echo >&2 "Error"; exit 1; }
+
+    # Stage all changes
+    git add "$FILE"
+  done
+fi
+
+exit 0
