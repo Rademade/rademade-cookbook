@@ -1,0 +1,173 @@
+inherit_from:
+  - ~/.rubocop.yml
+
+AllCops:
+  TargetRubyVersion: 2.3
+  Exclude:
+    - 'frontend/**/*'
+    - 'backend/db/**/*'
+    - 'backend/config/**/*'
+    - 'backend/script/**/*'
+    - 'backend/bin/**/*'
+    - 'backend/**/*.erb'
+    - 'db/**/*'
+    - 'backend/db/schema.rb'
+    - 'schema.rb'
+
+Rails:
+  Enabled: true
+
+Metrics/LineLength:
+  Max: 150
+  Exclude:
+    - 'backend/db/schema.rb'
+    - 'db/schema.rb'
+    - 'schema.rb'
+    - 'backend/config/**/*'
+    - 'backend/**/*.erb'
+
+Style/EmptyLinesAroundBlockBody:
+  EnforcedStyle: no_empty_lines
+
+Style/EmptyLinesAroundClassBody:
+  EnforcedStyle: empty_lines
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+  Exclude:
+    - 'backend/config/**/*'
+
+Style/Encoding:
+  EnforcedStyle: always
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
+
+Style/Lambda:
+  EnforcedStyle: literal
+
+Metrics/MethodLength:
+  Exclude:
+    - 'backend/db/**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'backend/db/**/*'
+    - 'backend/config/**/*'
+    - 'backend/spec/**/*.rb'
+    # admin ctrl def can be this big
+    - 'backend/app/controllers/rademade_admin/**/*.rb'
+
+  ExcludedMethods:
+    - 'parameter'
+    - 'And'
+    - 'Then'
+    - 'When'
+    - 'Given'
+    - 'define'
+    - 'factory'
+    - 'included'
+
+Style/RegexpLiteral:
+  AllowInnerSlashes: true
+
+Style/AsciiComments:
+  Enabled: false
+
+Metrics/ClassLength:
+  Description: 'Avoid classes longer than 100 lines of code.'
+  Exclude:
+    - 'backend/app/models/**/*'
+    - 'backend/app/controllers/**/*'
+
+Style/BlockComments:
+  Description: 'Do not use block comments.'
+  Enabled: false
+
+Rails/SaveBang:
+  Enabled: true
+
+Style/Send:
+  Enabled: true
+
+Style/SymbolArray:
+  Enabled: false
+
+Style/MethodCallWithArgsParentheses:
+  Description: 'Use parentheses for method calls with arguments.'
+  Enabled: true
+  Include:
+    - 'backend/app/services/**/*'
+
+Style/ImplicitRuntimeError:
+  Description: >-
+                 Use `raise` or `fail` with an explicit exception class and
+                 message, rather than just a message.
+  Enabled: true
+
+Style/FirstHashElementLineBreak:
+  Description: >-
+                 Checks for a line break before the first element in a
+                 multi-line hash.
+  Enabled: true
+
+Style/FirstArrayElementLineBreak:
+  Description: >-
+                 Checks for a line break before the first element in a
+                 multi-line array.
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Exclude:
+      - 'backend/db/**/*'
+  Blacklist:
+    - decrement!
+    - decrement_counter
+    - increment!
+    - increment_counter
+    - toggle!
+    - update_attribute
+    - update_column
+    - update_columns
+    - update_counters
+
+# Its buggy, enable when fixed
+Rails/FilePath:
+  Enabled: false
+
+# Style/Encoding:
+#   EnforcedStyle: always
+#   AutoCorrectEncodingComment: '# encoding: utf-8'
+
+Documentation:
+  Exclude:
+    - 'backend/app/controllers/**/*'
+    - 'backend/app/models/**/*'
+    - 'backend/app/mailers/**/*'
+    - 'backend/app/uploaders/**/*'
+    - 'backend/app/clonners/**/*'
+    - 'backend/app/printers/**/*'
+    - 'backend/app/jobs/**/*'
+    - 'backend/app/inputs/**/*'
+    - 'backend/config/**/*'
+    - 'backend/db/*/**'
+
+Style/OptionalArguments:
+  Exclude:
+    - 'backend/features/**/*'
+
+Style/GuardClause:
+  Description: 'Check for conditionals that can be replaced with guard clauses'
+  Enabled: false
+
+Style/IfUnlessModifier:
+  Description: >-
+                 Favor modifier if/unless usage when you have a
+                 single-line body.
+  StyleGuide: '#if-as-a-modifier'
+  Enabled: false
